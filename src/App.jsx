@@ -1,13 +1,19 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root.jsx";
+import Search from "./pages/Search.jsx";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root />,
-      children: [],
+      children: [
+        {
+          path: "search",
+          element: <Search />,
+        },
+      ],
     },
   ]);
 
