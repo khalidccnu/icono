@@ -1,5 +1,5 @@
 import React from "react";
-import { Brands, Classic, Free, Sharp } from "./Icons.jsx";
+import { Brands, Classic, Free, Sharp } from "./FilterIcons.jsx";
 
 const Header = () => {
   return (
