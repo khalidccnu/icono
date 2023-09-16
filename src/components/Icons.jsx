@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getIcons } from "../redux/icons/iconsThunks.js";
 import Icon from "./Icon.jsx";
 
 const Icons = () => {
-  const [icons, setIcons] = useState([]);
+  const { icons } = useSelector((store) => store.iconsSlice);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get(`/icons.json`).then((response) => setIcons(response.data));
+    dispatch(getIcons());
   }, []);
 
   return (

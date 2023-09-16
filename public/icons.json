@@ -63,15 +63,6 @@
     "image": "https://ik.imagekit.io/khalidccnu/icono/cs-magnifying-glass.svg"
   },
   {
-    "id": 8,
-    "name": "magnifying-glass",
-    "family": "classic",
-    "style": "regular",
-    "categories": ["maps"],
-    "license": "free",
-    "image": "https://ik.imagekit.io/khalidccnu/icono/cr-magnifying-glass.svg"
-  },
-  {
     "id": 9,
     "name": "magnifying-glass",
     "family": "classic",
@@ -166,7 +157,7 @@
     "name": "check",
     "family": "classic",
     "style": "solid",
-    "categories": ["editing", "text-formating"],
+    "categories": ["editing", "text-formatting"],
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cs-check.svg"
   },
@@ -175,7 +166,7 @@
     "name": "check",
     "family": "classic",
     "style": "regular",
-    "categories": ["editing", "text-formating"],
+    "categories": ["editing", "text-formatting"],
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cr-check.svg"
   },
@@ -184,7 +175,7 @@
     "name": "check",
     "family": "classic",
     "style": "light",
-    "categories": ["editing", "text-formating"],
+    "categories": ["editing", "text-formatting"],
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cl-check.svg"
   },
