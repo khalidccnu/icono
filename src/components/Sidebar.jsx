@@ -1,4 +1,14 @@
 import React, { useEffect } from "react";
+import {
+  FaCircle,
+  FaHashtag,
+  FaLandmark,
+  FaMap,
+  FaPenAlt,
+  FaRegCircle,
+  FaTextHeight,
+} from "react-icons/fa";
+import { FaCircleHalfStroke, FaPeopleGroup } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setBuildingCateIcons,
@@ -42,35 +52,68 @@ const Sidebar = () => {
   }, [icons.length]);
 
   return (
-    <div className={`text-gray-500 space-y-3`}>
+    <div className={`text-gray-500 space-y-5`}>
       <div>
         <h6 className={`uppercase font-semibold text-xs`}>Style</h6>
         <ul className={`mt-2`}>
           <li>
-            <label className="label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500">
-              <div className={`flex items-center space-x-3`}>
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Solid</span>
+            <label className="group relative label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500 overflow-hidden">
+              <div className={`flex items-center w-full`}>
+                <input
+                  type="checkbox"
+                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                />
+                <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
+                <FaCircle
+                  className={`group-hover:hidden peer-checked:hidden`}
+                />
+                <span className="relative label-text peer-checked:text-white ml-3">
+                  Solid
+                </span>
+                <span className={`relative ml-auto peer-checked:text-white`}>
+                  {solidIcons.length}
+                </span>
               </div>
-              <span>{solidIcons.length}</span>
             </label>
           </li>
           <li>
-            <label className="label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500">
-              <div className={`flex items-center space-x-3`}>
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Regular</span>
+            <label className="group relative label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500 overflow-hidden">
+              <div className={`flex items-center w-full`}>
+                <input
+                  type="checkbox"
+                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                />
+                <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
+                <FaCircleHalfStroke
+                  className={`group-hover:hidden peer-checked:hidden`}
+                />
+                <span className="relative label-text peer-checked:text-white ml-3">
+                  Regular
+                </span>
+                <span className={`relative ml-auto peer-checked:text-white`}>
+                  {regularIcons.length}
+                </span>
               </div>
-              <span>{regularIcons.length}</span>
             </label>
           </li>
           <li>
-            <label className="label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500">
-              <div className={`flex items-center space-x-3`}>
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Light</span>
+            <label className="group relative label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500 overflow-hidden">
+              <div className={`flex items-center w-full`}>
+                <input
+                  type="checkbox"
+                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                />
+                <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
+                <FaRegCircle
+                  className={`group-hover:hidden peer-checked:hidden`}
+                />
+                <span className="relative label-text peer-checked:text-white ml-3">
+                  Light
+                </span>
+                <span className={`relative ml-auto peer-checked:text-white`}>
+                  {lightIcons.length}
+                </span>
               </div>
-              <span>{lightIcons.length}</span>
             </label>
           </li>
         </ul>
@@ -79,57 +122,121 @@ const Sidebar = () => {
         <h6 className={`uppercase font-semibold text-xs`}>Categories</h6>
         <ul className={`mt-2`}>
           <li>
-            <label className="label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500">
-              <div className={`flex items-center space-x-3`}>
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Building</span>
+            <label className="group relative label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500 overflow-hidden">
+              <div className={`flex items-center w-full`}>
+                <input
+                  type="checkbox"
+                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                />
+                <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
+                <FaLandmark
+                  className={`group-hover:hidden peer-checked:hidden`}
+                />
+                <span className="relative label-text peer-checked:text-white ml-3">
+                  Building
+                </span>
+                <span className={`relative ml-auto peer-checked:text-white`}>
+                  {buildingCateIcons.length}
+                </span>
               </div>
-              <span>{buildingCateIcons.length}</span>
             </label>
           </li>
           <li>
-            <label className="label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500">
-              <div className={`flex items-center space-x-3`}>
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Editing</span>
+            <label className="group relative label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500 overflow-hidden">
+              <div className={`flex items-center w-full`}>
+                <input
+                  type="checkbox"
+                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                />
+                <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
+                <FaPenAlt
+                  className={`group-hover:hidden peer-checked:hidden`}
+                />
+                <span className="relative label-text peer-checked:text-white ml-3">
+                  Editing
+                </span>
+                <span className={`relative ml-auto peer-checked:text-white`}>
+                  {editingCateIcons.length}
+                </span>
               </div>
-              <span>{editingCateIcons.length}</span>
             </label>
           </li>
           <li>
-            <label className="label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500">
-              <div className={`flex items-center space-x-3`}>
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Maps</span>
+            <label className="group relative label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500 overflow-hidden">
+              <div className={`flex items-center w-full`}>
+                <input
+                  type="checkbox"
+                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                />
+                <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
+                <FaMap className={`group-hover:hidden peer-checked:hidden`} />
+                <span className="relative label-text peer-checked:text-white ml-3">
+                  Maps
+                </span>
+                <span className={`relative ml-auto peer-checked:text-white`}>
+                  {mapsCateIcons.length}
+                </span>
               </div>
-              <span>{mapsCateIcons.length}</span>
             </label>
           </li>
           <li>
-            <label className="label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500">
-              <div className={`flex items-center space-x-3`}>
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Social</span>
+            <label className="group relative label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500 overflow-hidden">
+              <div className={`flex items-center w-full`}>
+                <input
+                  type="checkbox"
+                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                />
+                <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
+                <FaHashtag
+                  className={`group-hover:hidden peer-checked:hidden`}
+                />
+                <span className="relative label-text peer-checked:text-white ml-3">
+                  Social
+                </span>
+                <span className={`relative ml-auto peer-checked:text-white`}>
+                  {socialCateIcons.length}
+                </span>
               </div>
-              <span>{socialCateIcons.length}</span>
             </label>
           </li>
           <li>
-            <label className="label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500">
-              <div className={`flex items-center space-x-3`}>
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Text Formating</span>
+            <label className="group relative label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500 overflow-hidden">
+              <div className={`flex items-center w-full`}>
+                <input
+                  type="checkbox"
+                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                />
+                <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
+                <FaTextHeight
+                  className={`group-hover:hidden peer-checked:hidden`}
+                />
+                <span className="relative label-text peer-checked:text-white ml-3">
+                  Text Formating
+                </span>
+                <span className={`relative ml-auto peer-checked:text-white`}>
+                  {textFormattingCateIcons.length}
+                </span>
               </div>
-              <span>{textFormattingCateIcons.length}</span>
             </label>
           </li>
           <li>
-            <label className="label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500">
-              <div className={`flex items-center space-x-3`}>
-                <input type="checkbox" className="checkbox" />
-                <span className="label-text">Users + People</span>
+            <label className="group relative label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500 overflow-hidden">
+              <div className={`flex items-center w-full`}>
+                <input
+                  type="checkbox"
+                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                />
+                <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
+                <FaPeopleGroup
+                  className={`group-hover:hidden peer-checked:hidden`}
+                />
+                <span className="relative label-text peer-checked:text-white ml-3">
+                  Users + People
+                </span>
+                <span className={`relative ml-auto peer-checked:text-white`}>
+                  {usersPeopleCateIcons.length}
+                </span>
               </div>
-              <span>{usersPeopleCateIcons.length}</span>
             </label>
           </li>
         </ul>

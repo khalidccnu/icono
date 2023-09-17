@@ -1,11 +1,12 @@
 import React from "react";
+import { BsFilter } from "react-icons/bs";
 import { Brands, Classic, Free, Sharp } from "./FilterIcons.jsx";
 
-const Header = () => {
+const Header = ({ isFilter, setFilter }) => {
   return (
-    <header className={`bg-white pt-5`}>
+    <header className={`bg-white pt-10 lg:pt-5`}>
       <div className="container">
-        <div className={`grid grid-cols-1 sm:grid-cols-2 gap-8 items-center`}>
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center`}>
           <div className={`grid grid-cols-4 gap-4`}>
             <div
               className={`group text-center hover:text-blue-500 border border-transparent border-b-4 hover:border-b-blue-500 pb-5 cursor-pointer transition-colors duration-500`}
@@ -41,8 +42,22 @@ const Header = () => {
             </div>
           </div>
           <div
-            className={`order-first sm:order-none justify-self-center sm:justify-self-end sm:pb-5`}
+            className={`flex justify-between order-first lg:order-none lg:justify-end lg:pb-5`}
           >
+            <div
+              className="tooltip before:bg-[#183153] before:text-white"
+              data-tip="Show Filters"
+            >
+              <button
+                className="lg:hidden btn btn-md !bg-white border-2 border-gray-100 hover:border-blue-500 text-blue-500 normal-case rounded-xl transition-colors duration-500"
+                onClick={() => setFilter(!isFilter)}
+              >
+                <BsFilter
+                  className={`text-xl ${isFilter ? "rotate-180" : ""}`}
+                />
+                <span>{isFilter ? "Close" : "Show"} Filters</span>
+              </button>
+            </div>
             <select
               name="sort"
               className="select select-md bg-white border-2 border-gray-300 rounded-xl focus:outline-0"
