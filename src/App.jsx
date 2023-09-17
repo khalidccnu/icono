@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
 import Root from "./Root.jsx";
+import Error from "./Error.jsx";
 import Search from "./pages/Search.jsx";
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
     {
       path: "/",
       element: <Root />,
+      errorElement: <Error />,
       children: [
         {
           path: "search",
