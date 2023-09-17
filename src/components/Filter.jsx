@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getIcons } from "../redux/icons/iconsThunks.js";
 
 const Filter = ({ displayIcons, setDisplayIcons }) => {
-  const [isLF, setLF] = useState(false);
   const { filterFamily, filterList, filterLicense } = useSelector(
     (store) => store.filterSlice,
   );
@@ -15,7 +14,7 @@ const Filter = ({ displayIcons, setDisplayIcons }) => {
   }, []);
 
   useEffect(() => {
-    if (icons) {
+    if (icons.length) {
       setDisplayIcons([]);
 
       if (filterFamily.length) {
@@ -46,19 +45,17 @@ const Filter = ({ displayIcons, setDisplayIcons }) => {
         setDisplayIcons(icons);
       }
     }
-  }, [icons, filterFamily.length, filterList.length, isLF]);
+  }, [icons.length, filterFamily.length, filterList.length, filterLicense]);
 
   useEffect(() => {
-    if (displayIcons && filterLicense) {
+    if (displayIcons.length && filterLicense) {
       const filterIcons = displayIcons.filter(
         (icon) => icon.license === "free",
       );
 
       setDisplayIcons(filterIcons);
-    } else {
-      setLF(!isLF);
     }
-  }, [displayIcons, filterLicense]);
+  }, [displayIcons.length, filterLicense]);
 
   return <></>;
 };

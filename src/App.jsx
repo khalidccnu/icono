@@ -14,7 +14,7 @@ const App = () => {
       errorElement: <Error />,
       children: [
         {
-          path: "search",
+          index: true,
           element: <Search />,
         },
       ],

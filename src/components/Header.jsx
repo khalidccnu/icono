@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsFilter } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -38,6 +38,15 @@ const Header = ({ isFilter, setFilter }) => {
     }
   };
 
+  useEffect(() => {
+    if (!filterFamily.includes("classic"))
+      changeFamily({ name: "classic", value: false });
+    if (!filterFamily.includes("sharp"))
+      changeFamily({ name: "sharp", value: false });
+    if (!filterFamily.includes("brands"))
+      changeFamily({ name: "brands", value: false });
+  }, [filterFamily.length]);
+
   return (
     <header className={`bg-white pt-10 lg:pt-5`}>
       <div className="container">
@@ -45,7 +54,9 @@ const Header = ({ isFilter, setFilter }) => {
           <div className={`grid grid-cols-4 gap-4`}>
             <div
               className={`group text-center hover:text-blue-500 border border-transparent border-b-4 hover:border-b-blue-500 pb-5 cursor-pointer transition-colors duration-500 ${
-                family.classic ? "text-blue-500 border-b-blue-500" : ""
+                family.classic && filterFamily.includes("classic")
+                  ? "text-blue-500 border-b-blue-500"
+                  : ""
               }`}
               onClick={() => {
                 changeFamily({ name: "classic", value: !family.classic });
@@ -54,14 +65,18 @@ const Header = ({ isFilter, setFilter }) => {
             >
               <Classic
                 className={`fill-[#183153] group-hover:fill-blue-500 w-10 h-10 mx-auto mb-2 transition-[fill] duration-500 ${
-                  family.classic ? "fill-blue-500" : ""
+                  family.classic && filterFamily.includes("classic")
+                    ? "fill-blue-500"
+                    : ""
                 }`}
               />
               <span>Classic</span>
             </div>
             <div
               className={`group text-center hover:text-blue-500 border border-transparent border-b-4 hover:border-b-blue-500 pb-5 cursor-pointer transition-colors duration-500 ${
-                family.sharp ? "text-blue-500 border-b-blue-500" : ""
+                family.sharp && filterFamily.includes("sharp")
+                  ? "text-blue-500 border-b-blue-500"
+                  : ""
               }`}
               onClick={() => {
                 changeFamily({ name: "sharp", value: !family.sharp });
@@ -70,14 +85,18 @@ const Header = ({ isFilter, setFilter }) => {
             >
               <Sharp
                 className={`fill-[#183153] group-hover:fill-blue-500 w-10 h-10 mx-auto mb-2 transition-[fill] duration-500 ${
-                  family.sharp ? "fill-blue-500" : ""
+                  family.sharp && filterFamily.includes("sharp")
+                    ? "fill-blue-500"
+                    : ""
                 }`}
               />
               <span>Sharp</span>
             </div>
             <div
               className={`group text-center hover:text-blue-500 border border-transparent border-b-4 hover:border-b-blue-500 pb-5 cursor-pointer transition-colors duration-500 ${
-                family.brands ? "text-blue-500 border-b-blue-500" : ""
+                family.brands && filterFamily.includes("brands")
+                  ? "text-blue-500 border-b-blue-500"
+                  : ""
               }`}
               onClick={() => {
                 changeFamily({ name: "brands", value: !family.brands });
@@ -86,7 +105,9 @@ const Header = ({ isFilter, setFilter }) => {
             >
               <Brands
                 className={`fill-[#183153] group-hover:fill-blue-500 w-10 h-10 mx-auto mb-2 transition-[fill] duration-500 ${
-                  family.brands ? "fill-blue-500" : ""
+                  family.brands && filterFamily.includes("brands")
+                    ? "fill-blue-500"
+                    : ""
                 }`}
               />
               <span>Brands</span>
