@@ -7,11 +7,9 @@ const initialState = {
   regularIcons: [],
   lightIcons: [],
   buildingCateIcons: [],
-  editingCateIcons: [],
   mapsCateIcons: [],
   socialCateIcons: [],
   textFormattingCateIcons: [],
-  usersPeopleCateIcons: [],
 };
 
 const iconsSlice = createSlice({
@@ -30,33 +28,23 @@ const iconsSlice = createSlice({
       state.lightIcons = state.icons.filter((icon) => icon.style === "light");
     },
     setBuildingCateIcons: (state) => {
-      state.buildingCateIcons = state.icons.filter((icon) =>
-        icon.categories.includes("building"),
-      );
-    },
-    setEditingCateIcons: (state) => {
-      state.editingCateIcons = state.icons.filter((icon) =>
-        icon.categories.includes("editing"),
+      state.buildingCateIcons = state.icons.filter(
+        (icon) => icon.category === "building",
       );
     },
     setMapsCateIcons: (state) => {
-      state.mapsCateIcons = state.icons.filter((icon) =>
-        icon.categories.includes("maps"),
+      state.mapsCateIcons = state.icons.filter(
+        (icon) => icon.category === "maps",
       );
     },
     setSocialCateIcons: (state) => {
-      state.socialCateIcons = state.icons.filter((icon) =>
-        icon.categories.includes("social"),
+      state.socialCateIcons = state.icons.filter(
+        (icon) => icon.category === "social",
       );
     },
     setTextFormattingCateIcons: (state) => {
-      state.textFormattingCateIcons = state.icons.filter((icon) =>
-        icon.categories.includes("text-formatting"),
-      );
-    },
-    setUsersPeopleCateIcons: (state) => {
-      state.usersPeopleCateIcons = state.icons.filter((icon) =>
-        icon.categories.includes("users-people"),
+      state.textFormattingCateIcons = state.icons.filter(
+        (icon) => icon.category === "text-formatting",
       );
     },
   },
@@ -72,10 +60,8 @@ export const {
   setRegularIcons,
   setLightIcons,
   setBuildingCateIcons,
-  setEditingCateIcons,
   setMapsCateIcons,
   setSocialCateIcons,
   setTextFormattingCateIcons,
-  setUsersPeopleCateIcons,
 } = iconsSlice.actions;
 export default iconsSlice.reducer;

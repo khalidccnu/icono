@@ -1,27 +1,24 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getIcons } from "../redux/icons/iconsThunks.js";
+import React, { useState } from "react";
+import Filter from "./Filter.jsx";
 import Icon from "./Icon.jsx";
 
 const Icons = () => {
-  const { icons } = useSelector((store) => store.iconsSlice);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getIcons());
-  }, []);
+  const [displayIcons, setDisplayIcons] = useState([]);
 
   return (
-    <div>
-      <div className={`mb-5`}>
-        <h3 className={`font-bold text-lg`}>{icons.length} Icons</h3>
+    <>
+      <Filter displayIcons={displayIcons} setDisplayIcons={setDisplayIcons} />
+      <div>
+        <div className={`mb-5`}>
+          <h3 className={`font-bold text-lg`}>{displayIcons.length} Icons</h3>
+        </div>
+        <div className={`grid grid-cols-4 gap-4`}>
+          {displayIcons.map((icon) => (
+            <Icon key={icon.id} icon={icon} />
+          ))}
+        </div>
       </div>
-      <div className={`grid grid-cols-4 gap-4`}>
-        {icons.map((icon) => (
-          <Icon key={icon.id} icon={icon} />
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 

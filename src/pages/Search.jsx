@@ -22,7 +22,7 @@ const Search = () => {
   return (
     <>
       <Header isFilter={isFilter} setFilter={setFilter} />
-      <section className={`bg-gray-100 py-10`}>
+      <section className={`py-10`}>
         <div className="container">
           <div className={`grid grid-cols-1 lg:grid-cols-[18rem_auto] gap-8`}>
             {isFilter ? <Sidebar /> : null}

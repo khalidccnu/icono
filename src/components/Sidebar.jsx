@@ -4,38 +4,47 @@ import {
   FaHashtag,
   FaLandmark,
   FaMap,
-  FaPenAlt,
   FaRegCircle,
   FaTextHeight,
 } from "react-icons/fa";
-import { FaCircleHalfStroke, FaPeopleGroup } from "react-icons/fa6";
+import { FaCircleHalfStroke } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
+import { setFilterList } from "../redux/filter/filterSlice.js";
 import {
   setBuildingCateIcons,
-  setEditingCateIcons,
   setLightIcons,
   setMapsCateIcons,
   setRegularIcons,
   setSocialCateIcons,
   setSolidIcons,
   setTextFormattingCateIcons,
-  setUsersPeopleCateIcons,
 } from "../redux/icons/iconsSlice.js";
 
 const Sidebar = () => {
+  const { filterList } = useSelector((store) => store.filterSlice);
   const {
     icons,
     solidIcons,
     regularIcons,
     lightIcons,
     buildingCateIcons,
-    editingCateIcons,
     mapsCateIcons,
     socialCateIcons,
     textFormattingCateIcons,
-    usersPeopleCateIcons,
   } = useSelector((store) => store.iconsSlice);
   const dispatch = useDispatch();
+
+  const handleFilterList = (name) => {
+    const exist = filterList.includes(name);
+
+    if (exist) {
+      const tempFilterList = filterList.filter((item) => item !== name);
+      dispatch(setFilterList(tempFilterList));
+    } else {
+      const tempFilterList = [...filterList, name];
+      dispatch(setFilterList(tempFilterList));
+    }
+  };
 
   useEffect(() => {
     if (icons.length) {
@@ -43,11 +52,9 @@ const Sidebar = () => {
       dispatch(setRegularIcons());
       dispatch(setLightIcons());
       dispatch(setBuildingCateIcons());
-      dispatch(setEditingCateIcons());
       dispatch(setMapsCateIcons());
       dispatch(setSocialCateIcons());
       dispatch(setTextFormattingCateIcons());
-      dispatch(setUsersPeopleCateIcons());
     }
   }, [icons.length]);
 
@@ -62,6 +69,7 @@ const Sidebar = () => {
                 <input
                   type="checkbox"
                   className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  onClick={() => handleFilterList("solid")}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaCircle
@@ -82,6 +90,7 @@ const Sidebar = () => {
                 <input
                   type="checkbox"
                   className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  onClick={() => handleFilterList("regular")}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaCircleHalfStroke
@@ -102,6 +111,7 @@ const Sidebar = () => {
                 <input
                   type="checkbox"
                   className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  onClick={() => handleFilterList("light")}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaRegCircle
@@ -127,6 +137,7 @@ const Sidebar = () => {
                 <input
                   type="checkbox"
                   className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  onClick={() => handleFilterList("building")}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaLandmark
@@ -147,26 +158,7 @@ const Sidebar = () => {
                 <input
                   type="checkbox"
                   className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
-                />
-                <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
-                <FaPenAlt
-                  className={`group-hover:hidden peer-checked:hidden`}
-                />
-                <span className="relative label-text peer-checked:text-white ml-3">
-                  Editing
-                </span>
-                <span className={`relative ml-auto peer-checked:text-white`}>
-                  {editingCateIcons.length}
-                </span>
-              </div>
-            </label>
-          </li>
-          <li>
-            <label className="group relative label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500 overflow-hidden">
-              <div className={`flex items-center w-full`}>
-                <input
-                  type="checkbox"
-                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  onClick={() => handleFilterList("maps")}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaMap className={`group-hover:hidden peer-checked:hidden`} />
@@ -185,6 +177,7 @@ const Sidebar = () => {
                 <input
                   type="checkbox"
                   className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  onClick={() => handleFilterList("social")}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaHashtag
@@ -205,36 +198,17 @@ const Sidebar = () => {
                 <input
                   type="checkbox"
                   className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  onClick={() => handleFilterList("text-formatting")}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaTextHeight
                   className={`group-hover:hidden peer-checked:hidden`}
                 />
                 <span className="relative label-text peer-checked:text-white ml-3">
-                  Text Formating
+                  Text Formatting
                 </span>
                 <span className={`relative ml-auto peer-checked:text-white`}>
                   {textFormattingCateIcons.length}
-                </span>
-              </div>
-            </label>
-          </li>
-          <li>
-            <label className="group relative label p-2 border-2 border-transparent hover:border-gray-300 rounded-lg cursor-pointer transition-colors duration-500 overflow-hidden">
-              <div className={`flex items-center w-full`}>
-                <input
-                  type="checkbox"
-                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
-                />
-                <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
-                <FaPeopleGroup
-                  className={`group-hover:hidden peer-checked:hidden`}
-                />
-                <span className="relative label-text peer-checked:text-white ml-3">
-                  Users + People
-                </span>
-                <span className={`relative ml-auto peer-checked:text-white`}>
-                  {usersPeopleCateIcons.length}
                 </span>
               </div>
             </label>

@@ -4,7 +4,7 @@
     "name": "house",
     "family": "classic",
     "style": "solid",
-    "categories": ["building", "maps"],
+    "category": "building",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cs-house.svg"
   },
@@ -13,7 +13,7 @@
     "name": "house",
     "family": "classic",
     "style": "regular",
-    "categories": ["building", "maps"],
+    "category": "building",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cr-house.svg"
   },
@@ -22,7 +22,7 @@
     "name": "house",
     "family": "classic",
     "style": "light",
-    "categories": ["building", "maps"],
+    "category": "building",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cl-house.svg"
   },
@@ -31,7 +31,7 @@
     "name": "house",
     "family": "sharp",
     "style": "solid",
-    "categories": ["building", "maps"],
+    "category": "building",
     "license": "pro",
     "image": "https://ik.imagekit.io/khalidccnu/icono/ss-house.svg"
   },
@@ -40,7 +40,7 @@
     "name": "house",
     "family": "sharp",
     "style": "regular",
-    "categories": ["building", "maps"],
+    "category": "building",
     "license": "pro",
     "image": "https://ik.imagekit.io/khalidccnu/icono/sr-house.svg"
   },
@@ -49,7 +49,7 @@
     "name": "house",
     "family": "sharp",
     "style": "light",
-    "categories": ["building", "maps"],
+    "category": "building",
     "license": "pro",
     "image": "https://ik.imagekit.io/khalidccnu/icono/sl-house.svg"
   },
@@ -58,7 +58,7 @@
     "name": "magnifying-glass",
     "family": "classic",
     "style": "solid",
-    "categories": ["maps"],
+    "category": "maps",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cs-magnifying-glass.svg"
   },
@@ -67,7 +67,7 @@
     "name": "magnifying-glass",
     "family": "classic",
     "style": "light",
-    "categories": ["maps"],
+    "category": "maps",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cl-magnifying-glass.svg"
   },
@@ -76,7 +76,7 @@
     "name": "magnifying-glass",
     "family": "sharp",
     "style": "solid",
-    "categories": ["maps"],
+    "category": "maps",
     "license": "pro",
     "image": "https://ik.imagekit.io/khalidccnu/icono/ss-magnifying-glass.svg"
   },
@@ -85,7 +85,7 @@
     "name": "magnifying-glass",
     "family": "sharp",
     "style": "regular",
-    "categories": ["maps"],
+    "category": "maps",
     "license": "pro",
     "image": "https://ik.imagekit.io/khalidccnu/icono/sr-magnifying-glass.svg"
   },
@@ -94,7 +94,7 @@
     "name": "magnifying-glass",
     "family": "sharp",
     "style": "light",
-    "categories": ["maps"],
+    "category": "maps",
     "license": "pro",
     "image": "https://ik.imagekit.io/khalidccnu/icono/sl-magnifying-glass.svg"
   },
@@ -103,7 +103,7 @@
     "name": "user",
     "family": "classic",
     "style": "solid",
-    "categories": ["social", "users-people"],
+    "category": "social",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cs-user.svg"
   },
@@ -112,7 +112,7 @@
     "name": "user",
     "family": "classic",
     "style": "regular",
-    "categories": ["social", "users-people"],
+    "category": "social",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cr-user.svg"
   },
@@ -121,7 +121,7 @@
     "name": "user",
     "family": "classic",
     "style": "light",
-    "categories": ["social", "users-people"],
+    "category": "social",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cl-user.svg"
   },
@@ -130,7 +130,7 @@
     "name": "user",
     "family": "sharp",
     "style": "solid",
-    "categories": ["social", "users-people"],
+    "category": "social",
     "license": "pro",
     "image": "https://ik.imagekit.io/khalidccnu/icono/ss-user.svg"
   },
@@ -139,7 +139,7 @@
     "name": "user",
     "family": "sharp",
     "style": "regular",
-    "categories": ["social", "users-people"],
+    "category": "social",
     "license": "pro",
     "image": "https://ik.imagekit.io/khalidccnu/icono/sr-user.svg"
   },
@@ -148,7 +148,7 @@
     "name": "user",
     "family": "sharp",
     "style": "light",
-    "categories": ["social", "users-people"],
+    "category": "social",
     "license": "pro",
     "image": "https://ik.imagekit.io/khalidccnu/icono/sl-user.svg"
   },
@@ -157,7 +157,7 @@
     "name": "check",
     "family": "classic",
     "style": "solid",
-    "categories": ["editing", "text-formatting"],
+    "category": "text-formatting",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cs-check.svg"
   },
@@ -166,7 +166,7 @@
     "name": "check",
     "family": "classic",
     "style": "regular",
-    "categories": ["editing", "text-formatting"],
+    "category": "text-formatting",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cr-check.svg"
   },
@@ -175,7 +175,7 @@
     "name": "check",
     "family": "classic",
     "style": "light",
-    "categories": ["editing", "text-formatting"],
+    "category": "text-formatting",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/cl-check.svg"
   },
@@ -184,7 +184,7 @@
     "name": "facebook",
     "family": "brands",
     "style": "",
-    "categories": [],
+    "category": "social",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/facebook.svg"
   },
@@ -193,7 +193,7 @@
     "name": "instagram",
     "family": "brands",
     "style": "",
-    "categories": [],
+    "category": "social",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/instagram.svg"
   },
@@ -202,7 +202,7 @@
     "name": "twitter",
     "family": "brands",
     "style": "",
-    "categories": [],
+    "category": "social",
     "license": "free",
     "image": "https://ik.imagekit.io/khalidccnu/icono/twitter.svg"
   }
