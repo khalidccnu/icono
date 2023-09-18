@@ -78,12 +78,12 @@ const Sidebar = () => {
                   className={`relative group-hover:hidden peer-checked:hidden`}
                 />
                 <FaSquare
-                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                  className={`relative hidden group-hover:inline peer-checked:hidden text-white stroke-gray-500 stroke-[20]`}
                 />
                 <FaSquareCheck
                   className={`relative hidden peer-checked:inline text-white`}
                 />
-                <span className="relative label-text peer-checked:text-white ml-3">
+                <span className="relative label-text text-gray-500 peer-checked:text-white ml-3">
                   Solid
                 </span>
                 <span className={`relative ml-auto peer-checked:text-white`}>
@@ -106,12 +106,12 @@ const Sidebar = () => {
                   className={`relative group-hover:hidden peer-checked:hidden`}
                 />
                 <FaSquare
-                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                  className={`relative hidden group-hover:inline peer-checked:hidden text-white stroke-gray-500 stroke-[20]`}
                 />
                 <FaSquareCheck
                   className={`relative hidden peer-checked:inline text-white`}
                 />
-                <span className="relative label-text peer-checked:text-white ml-3">
+                <span className="relative label-text text-gray-500 peer-checked:text-white ml-3">
                   Regular
                 </span>
                 <span className={`relative ml-auto peer-checked:text-white`}>
@@ -134,12 +134,12 @@ const Sidebar = () => {
                   className={`relative group-hover:hidden peer-checked:hidden`}
                 />
                 <FaSquare
-                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                  className={`relative hidden group-hover:inline peer-checked:hidden text-white stroke-gray-500 stroke-[20]`}
                 />
                 <FaSquareCheck
                   className={`relative hidden peer-checked:inline text-white`}
                 />
-                <span className="relative label-text peer-checked:text-white ml-3">
+                <span className="relative label-text text-gray-500 peer-checked:text-white ml-3">
                   Light
                 </span>
                 <span className={`relative ml-auto peer-checked:text-white`}>
@@ -167,12 +167,12 @@ const Sidebar = () => {
                   className={`relative group-hover:hidden peer-checked:hidden`}
                 />
                 <FaSquare
-                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                  className={`relative hidden group-hover:inline peer-checked:hidden text-white stroke-gray-500 stroke-[20]`}
                 />
                 <FaSquareCheck
                   className={`relative hidden peer-checked:inline text-white`}
                 />
-                <span className="relative label-text peer-checked:text-white ml-3">
+                <span className="relative label-text text-gray-500 peer-checked:text-white ml-3">
                   Building
                 </span>
                 <span className={`relative ml-auto peer-checked:text-white`}>
@@ -195,12 +195,12 @@ const Sidebar = () => {
                   className={`relative group-hover:hidden peer-checked:hidden`}
                 />
                 <FaSquare
-                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                  className={`relative hidden group-hover:inline peer-checked:hidden text-white stroke-gray-500 stroke-[20]`}
                 />
                 <FaSquareCheck
                   className={`relative hidden peer-checked:inline text-white`}
                 />
-                <span className="relative label-text peer-checked:text-white ml-3">
+                <span className="relative label-text text-gray-500 peer-checked:text-white ml-3">
                   Maps
                 </span>
                 <span className={`relative ml-auto peer-checked:text-white`}>
@@ -223,12 +223,12 @@ const Sidebar = () => {
                   className={`relative group-hover:hidden peer-checked:hidden`}
                 />
                 <FaSquare
-                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                  className={`relative hidden group-hover:inline peer-checked:hidden text-white stroke-gray-500 stroke-[20]`}
                 />
                 <FaSquareCheck
                   className={`relative hidden peer-checked:inline text-white`}
                 />
-                <span className="relative label-text peer-checked:text-white ml-3">
+                <span className="relative label-text text-gray-500 peer-checked:text-white ml-3">
                   Social
                 </span>
                 <span className={`relative ml-auto peer-checked:text-white`}>
@@ -253,12 +253,12 @@ const Sidebar = () => {
                   className={`relative group-hover:hidden peer-checked:hidden`}
                 />
                 <FaSquare
-                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                  className={`relative hidden group-hover:inline peer-checked:hidden text-white stroke-gray-500 stroke-[20]`}
                 />
                 <FaSquareCheck
                   className={`relative hidden peer-checked:inline text-white`}
                 />
-                <span className="relative label-text peer-checked:text-white ml-3">
+                <span className="relative label-text text-gray-500 peer-checked:text-white ml-3">
                   Text Formatting
                 </span>
                 <span className={`relative ml-auto peer-checked:text-white`}>

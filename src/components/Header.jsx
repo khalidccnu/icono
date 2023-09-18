@@ -145,7 +145,7 @@ const Header = ({ isFilter, setFilter, isSort, setSort }) => {
             </div>
             <select
               name="sort"
-              className="select select-md bg-white border-2 border-gray-300 rounded-xl focus:outline-0"
+              className="sort-select select select-md bg-white border-2 border-gray-300 rounded-xl focus:outline-0 appearance-none"
               onChange={() => setSort(!isSort)}
             >
               <option value="">Featured</option>
