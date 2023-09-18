@@ -5,9 +5,10 @@ import {
   FaLandmark,
   FaMap,
   FaRegCircle,
+  FaSquare,
   FaTextHeight,
 } from "react-icons/fa";
-import { FaCircleHalfStroke } from "react-icons/fa6";
+import { FaCircleHalfStroke, FaSquareCheck } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilterList } from "../redux/filter/filterSlice.js";
 import {
@@ -68,13 +69,19 @@ const Sidebar = () => {
               <div className={`flex items-center w-full`}>
                 <input
                   type="checkbox"
-                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  className="peer checkbox hidden h-4 w-4 rounded z-10"
                   onClick={() => handleFilterList("solid")}
                   checked={filterList.includes("solid") ? "checked" : null}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaCircle
-                  className={`group-hover:hidden peer-checked:hidden`}
+                  className={`relative group-hover:hidden peer-checked:hidden`}
+                />
+                <FaSquare
+                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                />
+                <FaSquareCheck
+                  className={`relative hidden peer-checked:inline text-white`}
                 />
                 <span className="relative label-text peer-checked:text-white ml-3">
                   Solid
@@ -90,13 +97,19 @@ const Sidebar = () => {
               <div className={`flex items-center w-full`}>
                 <input
                   type="checkbox"
-                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  className="peer checkbox hidden h-4 w-4 rounded z-10"
                   onClick={() => handleFilterList("regular")}
                   checked={filterList.includes("regular") ? "checked" : null}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaCircleHalfStroke
-                  className={`group-hover:hidden peer-checked:hidden`}
+                  className={`relative group-hover:hidden peer-checked:hidden`}
+                />
+                <FaSquare
+                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                />
+                <FaSquareCheck
+                  className={`relative hidden peer-checked:inline text-white`}
                 />
                 <span className="relative label-text peer-checked:text-white ml-3">
                   Regular
@@ -112,13 +125,19 @@ const Sidebar = () => {
               <div className={`flex items-center w-full`}>
                 <input
                   type="checkbox"
-                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  className="peer checkbox hidden h-4 w-4 rounded z-10"
                   onClick={() => handleFilterList("light")}
                   checked={filterList.includes("light") ? "checked" : null}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaRegCircle
-                  className={`group-hover:hidden peer-checked:hidden`}
+                  className={`relative group-hover:hidden peer-checked:hidden`}
+                />
+                <FaSquare
+                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                />
+                <FaSquareCheck
+                  className={`relative hidden peer-checked:inline text-white`}
                 />
                 <span className="relative label-text peer-checked:text-white ml-3">
                   Light
@@ -139,13 +158,19 @@ const Sidebar = () => {
               <div className={`flex items-center w-full`}>
                 <input
                   type="checkbox"
-                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  className="peer checkbox hidden h-4 w-4 rounded z-10"
                   onClick={() => handleFilterList("building")}
                   checked={filterList.includes("building") ? "checked" : null}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaLandmark
-                  className={`group-hover:hidden peer-checked:hidden`}
+                  className={`relative group-hover:hidden peer-checked:hidden`}
+                />
+                <FaSquare
+                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                />
+                <FaSquareCheck
+                  className={`relative hidden peer-checked:inline text-white`}
                 />
                 <span className="relative label-text peer-checked:text-white ml-3">
                   Building
@@ -161,12 +186,20 @@ const Sidebar = () => {
               <div className={`flex items-center w-full`}>
                 <input
                   type="checkbox"
-                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  className="peer checkbox hidden h-4 w-4 rounded z-10"
                   onClick={() => handleFilterList("maps")}
                   checked={filterList.includes("maps") ? "checked" : null}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
-                <FaMap className={`group-hover:hidden peer-checked:hidden`} />
+                <FaMap
+                  className={`relative group-hover:hidden peer-checked:hidden`}
+                />
+                <FaSquare
+                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                />
+                <FaSquareCheck
+                  className={`relative hidden peer-checked:inline text-white`}
+                />
                 <span className="relative label-text peer-checked:text-white ml-3">
                   Maps
                 </span>
@@ -181,13 +214,19 @@ const Sidebar = () => {
               <div className={`flex items-center w-full`}>
                 <input
                   type="checkbox"
-                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  className="peer checkbox hidden h-4 w-4 rounded z-10"
                   onClick={() => handleFilterList("social")}
                   checked={filterList.includes("social") ? "checked" : null}
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaHashtag
-                  className={`group-hover:hidden peer-checked:hidden`}
+                  className={`relative group-hover:hidden peer-checked:hidden`}
+                />
+                <FaSquare
+                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                />
+                <FaSquareCheck
+                  className={`relative hidden peer-checked:inline text-white`}
                 />
                 <span className="relative label-text peer-checked:text-white ml-3">
                   Social
@@ -203,7 +242,7 @@ const Sidebar = () => {
               <div className={`flex items-center w-full`}>
                 <input
                   type="checkbox"
-                  className="peer checkbox hidden group-hover:inline checked:inline checked:checkbox-success h-4 w-4 rounded z-10"
+                  className="peer checkbox hidden h-4 w-4 rounded z-10"
                   onClick={() => handleFilterList("text-formatting")}
                   checked={
                     filterList.includes("text-formatting") ? "checked" : null
@@ -211,7 +250,13 @@ const Sidebar = () => {
                 />
                 <div className="absolute inset-0 peer-checked:bg-blue-500"></div>
                 <FaTextHeight
-                  className={`group-hover:hidden peer-checked:hidden`}
+                  className={`relative group-hover:hidden peer-checked:hidden`}
+                />
+                <FaSquare
+                  className={`relative hidden group-hover:inline peer-checked:hidden`}
+                />
+                <FaSquareCheck
+                  className={`relative hidden peer-checked:inline text-white`}
                 />
                 <span className="relative label-text peer-checked:text-white ml-3">
                   Text Formatting

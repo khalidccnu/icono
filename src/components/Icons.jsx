@@ -80,7 +80,7 @@ const Icons = ({ isSort }) => {
                 onClick={() => {
                   dispatch(setFilterFamily([]));
                   dispatch(setFilterList([]));
-                  dispatch(setFilterLicense());
+                  filterLicense ? dispatch(setFilterLicense()) : null;
                 }}
               >
                 <span className={`uppercase font-bold text-xs`}>Reset</span>
