@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getIcons } from "../redux/icons/iconsThunks.js";
 
-const Filter = ({ displayIcons, setDisplayIcons }) => {
+const Filter = ({ isSort, displayIcons, setDisplayIcons }) => {
   const { filterFamily, filterList, filterLicense } = useSelector(
     (store) => store.filterSlice,
   );
@@ -45,7 +45,13 @@ const Filter = ({ displayIcons, setDisplayIcons }) => {
         setDisplayIcons(icons);
       }
     }
-  }, [icons.length, filterFamily.length, filterList.length, filterLicense]);
+  }, [
+    icons.length,
+    filterFamily.length,
+    filterList.length,
+    filterLicense,
+    isSort,
+  ]);
 
   useEffect(() => {
     if (displayIcons.length && filterLicense) {
@@ -55,7 +61,17 @@ const Filter = ({ displayIcons, setDisplayIcons }) => {
 
       setDisplayIcons(filterIcons);
     }
-  }, [displayIcons.length, filterLicense]);
+  }, [displayIcons.length, filterLicense, isSort]);
+
+  useEffect(() => {
+    if (displayIcons.length && isSort) {
+      const sortIcons = [...displayIcons].sort((a, b) =>
+        a.name > b.name ? 1 : a.name < b.name ? -1 : 0,
+      );
+
+      setDisplayIcons(sortIcons);
+    }
+  }, [displayIcons.length, isSort]);
 
   return <></>;
 };

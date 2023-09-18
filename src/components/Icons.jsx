@@ -8,7 +8,7 @@ import {
 import Filter from "./Filter.jsx";
 import Icon from "./Icon.jsx";
 
-const Icons = () => {
+const Icons = ({ isSort }) => {
   const [displayIcons, setDisplayIcons] = useState([]);
   const { filterFamily, filterList, filterLicense } = useSelector(
     (store) => store.filterSlice,
@@ -32,7 +32,11 @@ const Icons = () => {
 
   return (
     <>
-      <Filter displayIcons={displayIcons} setDisplayIcons={setDisplayIcons} />
+      <Filter
+        isSort={isSort}
+        displayIcons={displayIcons}
+        setDisplayIcons={setDisplayIcons}
+      />
       <div>
         <div className={`flex flex-col sm:flex-row sm:items-center gap-3 mb-5`}>
           <h3 className={`font-bold text-lg whitespace-nowrap`}>

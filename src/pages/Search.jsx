@@ -5,6 +5,7 @@ import Icons from "../components/Icons.jsx";
 
 const Search = () => {
   const [isFilter, setFilter] = useState(false);
+  const [isSort, setSort] = useState(false);
 
   const handleResize = () => {
     if (innerWidth >= 1024) setFilter(true);
@@ -21,12 +22,17 @@ const Search = () => {
 
   return (
     <>
-      <Header isFilter={isFilter} setFilter={setFilter} />
+      <Header
+        isFilter={isFilter}
+        setFilter={setFilter}
+        isSort={isSort}
+        setSort={setSort}
+      />
       <section className={`py-10`}>
         <div className="container">
           <div className={`grid grid-cols-1 lg:grid-cols-[18rem_auto] gap-8`}>
             {isFilter ? <Sidebar /> : null}
-            <Icons />
+            <Icons isSort={isSort} />
           </div>
         </div>
       </section>
