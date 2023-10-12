@@ -10,5 +10,3 @@
 
 - Users can filter icons by multiple criteria.
 - Users can sort their icons easily.
-
-###### [Live](https://icono.netlify.app)
