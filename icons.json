@@ -1,0 +1,209 @@
+[
+  {
+    "id": 1,
+    "name": "house",
+    "family": "classic",
+    "style": "solid",
+    "category": "building",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/cs-house.svg"
+  },
+  {
+    "id": 2,
+    "name": "house",
+    "family": "classic",
+    "style": "regular",
+    "category": "building",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/cr-house.svg"
+  },
+  {
+    "id": 3,
+    "name": "house",
+    "family": "classic",
+    "style": "light",
+    "category": "building",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/cl-house.svg"
+  },
+  {
+    "id": 4,
+    "name": "house",
+    "family": "sharp",
+    "style": "solid",
+    "category": "building",
+    "license": "pro",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/ss-house.svg"
+  },
+  {
+    "id": 5,
+    "name": "house",
+    "family": "sharp",
+    "style": "regular",
+    "category": "building",
+    "license": "pro",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/sr-house.svg"
+  },
+  {
+    "id": 6,
+    "name": "house",
+    "family": "sharp",
+    "style": "light",
+    "category": "building",
+    "license": "pro",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/sl-house.svg"
+  },
+  {
+    "id": 7,
+    "name": "magnifying-glass",
+    "family": "classic",
+    "style": "solid",
+    "category": "maps",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/cs-magnifying-glass.svg"
+  },
+  {
+    "id": 9,
+    "name": "magnifying-glass",
+    "family": "classic",
+    "style": "light",
+    "category": "maps",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/cl-magnifying-glass.svg"
+  },
+  {
+    "id": 10,
+    "name": "magnifying-glass",
+    "family": "sharp",
+    "style": "solid",
+    "category": "maps",
+    "license": "pro",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/ss-magnifying-glass.svg"
+  },
+  {
+    "id": 11,
+    "name": "magnifying-glass",
+    "family": "sharp",
+    "style": "regular",
+    "category": "maps",
+    "license": "pro",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/sr-magnifying-glass.svg"
+  },
+  {
+    "id": 12,
+    "name": "magnifying-glass",
+    "family": "sharp",
+    "style": "light",
+    "category": "maps",
+    "license": "pro",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/sl-magnifying-glass.svg"
+  },
+  {
+    "id": 13,
+    "name": "user",
+    "family": "classic",
+    "style": "solid",
+    "category": "social",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/cs-user.svg"
+  },
+  {
+    "id": 14,
+    "name": "user",
+    "family": "classic",
+    "style": "regular",
+    "category": "social",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/cr-user.svg"
+  },
+  {
+    "id": 15,
+    "name": "user",
+    "family": "classic",
+    "style": "light",
+    "category": "social",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/cl-user.svg"
+  },
+  {
+    "id": 16,
+    "name": "user",
+    "family": "sharp",
+    "style": "solid",
+    "category": "social",
+    "license": "pro",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/ss-user.svg"
+  },
+  {
+    "id": 17,
+    "name": "user",
+    "family": "sharp",
+    "style": "regular",
+    "category": "social",
+    "license": "pro",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/sr-user.svg"
+  },
+  {
+    "id": 18,
+    "name": "user",
+    "family": "sharp",
+    "style": "light",
+    "category": "social",
+    "license": "pro",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/sl-user.svg"
+  },
+  {
+    "id": 19,
+    "name": "check",
+    "family": "classic",
+    "style": "solid",
+    "category": "text-formatting",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/cs-check.svg"
+  },
+  {
+    "id": 20,
+    "name": "check",
+    "family": "classic",
+    "style": "regular",
+    "category": "text-formatting",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/cr-check.svg"
+  },
+  {
+    "id": 21,
+    "name": "check",
+    "family": "classic",
+    "style": "light",
+    "category": "text-formatting",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/cl-check.svg"
+  },
+  {
+    "id": 22,
+    "name": "facebook",
+    "family": "brands",
+    "style": "",
+    "category": "social",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/facebook.svg"
+  },
+  {
+    "id": 23,
+    "name": "instagram",
+    "family": "brands",
+    "style": "",
+    "category": "social",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/instagram.svg"
+  },
+  {
+    "id": 24,
+    "name": "twitter",
+    "family": "brands",
+    "style": "",
+    "category": "social",
+    "license": "free",
+    "image": "https://ik.imagekit.io/khalidccnu/icono/twitter.svg"
+  }
+]
