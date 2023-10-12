@@ -9,7 +9,7 @@ import Search from "./pages/Search.jsx";
 const App = () => {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "icono",
       element: <Root />,
       errorElement: <Error />,
       children: [
